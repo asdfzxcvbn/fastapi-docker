@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  api:
+    container_name: api
+    image: ghcr.io/asdfzxcvbn/fastapi-docker:main
+    environment:
+      DEPLOY_TYPE: prod
+    ports:
+      - 127.0.0.1:12000:5678
+    volumes:
+      - ./app:/app:ro
